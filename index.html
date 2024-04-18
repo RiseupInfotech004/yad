@@ -2,21 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Free Online Games - Play On PC, Mobile &amp; Tablet - yad.com</title>
 
-    <meta content="index,follow" name="robots">
-
-    <meta name="keywords" content="free online games, pc, mobile, tablet, yad">
-    <meta name="description" content="yad.com has the most addicting free Online Games which you can play on your PC, mobile phone, tablet, pad without download or installation, enjoy!">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" name="viewport">
-
-
-
-    <link rel='canonical' href='https://www.yad.com'>
-
-    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="/js/blue/global.js?2024030501"></script>
+  <link rel='canonical' href='https://www.yad.com'>
 
     <link rel="shortcut icon" href="/favicon.ico">
 
@@ -717,71 +705,6 @@
             border: none
         }
     </style>
-
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-8878716159434368"></script>
-
-
-    <link rel="manifest" href="/manifest.json?2017022102">
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/serviceworker-2.js').then(function(registration) {
-                    // Registration was successful
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }).catch(function(err) {
-                    // registration failed :(
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-            window.addEventListener('beforeinstallprompt', (event) => {
-                // console.log('beforeinstallprompt', event);
-                // Stash the event so it can be triggered later.
-                window.deferredPrompt = event;
-                // Remove the 'hidden' class from the install button container
-                showInstallContainer["browser"] = true;
-                ShowOrHideInstallContainer();
-            });
-            window.addEventListener('appinstalled', (event) => {
-                //console.log('appinstalled', event);
-                // Clear the deferredPrompt so it can be garbage collected
-                window.deferredPrompt = null;
-            });
-        }
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NMRX37CK');
-    </script>
-
-    <script>
-        if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) {
-            setcookie("ISMOBILE", 1, 31536000000, "/");
-            setcookie("ISIOS", 1, 31536000000, "/");
-            setcookie("ISTABLET", 1, 31536000000, "/");
-            location.reload();
-        }
-        $(document).ready(function() {
-            $(document).on("mouseenter", '.thumb', function() {
-                $(this).find("div").slideDown('fast');
-            });
-            $(document).on("mouseleave", '.thumb', function() {
-                $(this).find("div").hide();
-            });
-        });
-    </script>
-
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 </head>
 
 <body>
@@ -1265,31 +1188,5 @@
 </div>
 
 <div id="backToTop"></div>
-
-<script>
-if(document.getElementById('installContainer')){
-    document.getElementById('installContainer').addEventListener('click', async () => {
-        console.log('installContainer-clicked');
-        const promptEvent = window.deferredPrompt;
-        if (!promptEvent) {
-            // The deferred prompt isn't available.
-            return;
-        }
-        // Show the install prompt.
-        promptEvent.prompt();
-        // Log the result
-        const result = await promptEvent.userChoice;
-        //console.log('userChoice', result);
-        // Reset the deferred prompt variable, since
-        // prompt() can only be called once.
-        window.deferredPrompt = null;
-        // Hide the install button.
-        document.getElementById('installContainer').style.display = "none";
-    });
-}
-</script>
-
-
-
 </body>
 </html>
