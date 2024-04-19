@@ -1,468 +1,728 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	
-	<title>Hospital Escaper - Casual Online Game</title>
-        <link rel='canonical' href='https://www.yad.com/Hospital-Escaper'>
-	<link rel="shortcut icon" href="/favicon.ico">
-
-    <style>
-		body{margin:0;padding:0;font-size:12px;color:#fff;font-family:Verdana,Geneva,sans-serif;background:#127DAB}html,body{height:100%}html{-webkit-text-size-adjust:100%}.WholeContainer{min-height:100%;min-height:-moz-calc(100% - 40px);min-height:-webkit-calc(100% - 40px);min-height:-o-calc(100% - 40px);min-height:calc(100% - 40px);height:auto!important}dl,dt,dd,ul,li,h1,h2,form,input,textarea,p,td,h4,h3{padding:0;margin:0}ul,dl{list-style:none}img{vertical-align:top;border:0}.clear{clear:both}.left{float:left}.right{float:right}div.header{min-width:300px;width:100%;height:50px;opacity:1;background:#48a0c9;background:-webkit-linear-gradient(top,#48a0c9 0%,#29638b 100%);background:linear-gradient(to bottom,#48a0c9 0%,#29638b 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#48a0c9',endColorstr='#29638b',GradientType=0);border-bottom:1px solid #111;text-align:center;overflow:hidden}div.header_left{float:left;width:40px;padding-left:10px;cursor:pointer}div.header_right{float:right;width:40px;padding-right:10px;cursor:pointer}div.HeaderMenuPC{float:left;width:700px;font-size:18px;line-height:50px;text-align:left}div.HeaderMenuPC a{color:#fff;text-decoration:none;padding:0 15px 5px 0}div.HeaderMenuPC a:hover{color:#eac450}#PopMenuDiv{position:absolute;width:180px;left:0;top:50px;z-index:1000;text-align:left;display:none}#PopMeneUL li{width:100%;height:32px;line-height:32px;font-size:14px;overflow:hidden;border-bottom:#427799 1px solid;background:#307199;padding:3px 0 3px 10px;color:#fff}#PopMeneUL li.selected{background:#2a5e7e}#PopMeneUL li.selected a{color:#FFF}#PopMeneUL li a{text-decoration:none;color:#FFF}#PopMeneUL li img{padding:0 5px 0 0}#searchDiv{width:100%;height:30px;padding:0 0 0 0;position:relative;display:none;clear:both;margin-top:-1px}#searchForm #keywordsDiv{height:30px;float:left;width:100%}#searchForm #keywordsInput{width:100%;height:30px;padding-left:5px;padding-right:60px}#searchForm #submitDiv{width:60px;height:30px;float:right;position:absolute;right:0}#searchForm #submitInput{width:100%;height:30px;border:0;background-color:#1f4a64;color:#FFF;font-weight:700}div.allgames{margin-left:auto;margin-right:auto;height:auto}div.thumb{text-align:center;position:relative;aspect-ratio:4 / 3;float:left;overflow:hidden}div.thumb{--margin:5px;--allWidth:calc(100% - 20px);--width:calc((100% - 20px)/2);margin:var(--margin);width:var(--width)}.tag-featured{position:absolute;top:0;left:0;width:58px;height:58px;background:url(/images/blue/tag-featured12.png) 0 0 no-repeat;display:none}@media only screen and (min-width:300px){div.thumb{--margin:5px;--allWidth:calc(100% - 30px);--width:calc((100% - 30px)/3);margin:var(--margin);width:var(--width)}.tag-featured{display:none}}@media only screen and (min-width:450px){.tag-featured{display:block}}@media only screen and (min-width:600px){div.thumb{--margin:5px;--allWidth:calc(100% - 40px);--width:calc((100% - 40px)/4);margin:var(--margin);width:var(--width)}.tag-featured{display:block}}@media only screen and (min-width:1000px){div.thumb{--margin:5px;--allWidth:calc(100% - 60px);--width:calc((100% - 60px)/6);margin:var(--margin);width:var(--width)}.tag-featured{display:block}}@media only screen and (min-width:1400px){div.thumb{--margin:5px;--allWidth:calc(100% - 80px);--width:calc((100% - 80px)/8);margin:var(--margin);width:var(--width)}.tag-featured{display:block}}div.thumb a img{width:100%;height:100%;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;border:2px solid #fff;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}div.thumb a{color:#f5f500;text-decoration:none}div.thumb div.GameName{position:absolute;bottom:2px;left:2px;width:calc(100% - 4px);;height:auto;display:none;color:#fff;background-color:#3a84ae;padding:5px 0 5px 0;font-size:12px;font-family:Verdana,Geneva,sans-serif;border-bottom-left-radius:10px;border-bottom-right-radius:10px}#loadingmoregames{clear:both;width:100%;text-align:center;padding:10px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}.foot{height:40px;width:100%;min-width:300px;line-height:40px;color:#fff;clear:both;overflow:hidden;text-align:center;background:#103455}.foot a{color:#fff;text-decoration:none}div.bottomtext{clear:both;padding:5px 10px 10px 10px;color:#fff;width:100%;min-width:240px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font-size:14px;line-height:20px}div.bottomtext a{color:#fff;font-weight:700;text-decoration:none}#backToTop{width:60px;height:50px;position:fixed;bottom:50px;right:10px;display:none;background:url(/images/blue/backtotop.png);cursor:pointer}.game-category{width:100%;overflow:hidden}.game-category .title{text-align:center;color:#fff;font-size:18px;padding-bottom:10px}.game-category .list{overflow:hidden;margin:0 -12px 0 5px}.game-category .list a{display:none;font-size:14px;float:left;color:#fff;box-shadow:-1px 1px 6px 0 rgba(0,0,0,.2);margin:5px 12px 5px 0;padding:3px;overflow:hidden;width:calc(50% - 15px);box-sizing:border-box}.game-category .list a:nth-child(-n+36){display:block}.game-category .list a:hover{color:#fdb504}.game-category .list .item{width:50px;height:50px;float:left}.game-category .list .item img{height:100%;width:100%;border-radius:10px}.game-category .list .name{float:left;height:50px;display:flex;justify-content:center;align-items:center;width:calc(100% - 50px)}.game-category .list .name .text{float:left;text-align:center}@media only screen and (min-width:800px){.game-category .list .item{width:100px;height:100px}.game-category .list .name{height:100px;width:calc(100% - 100px)}}@media only screen and (min-width:600px){.game-category .list a{width:calc(33% - 12px)}}@media only screen and (min-width:1000px){.game-category .list a{width:calc(25% - 14px)}}@media only screen and (min-width:1400px){.game-category .list a{width:calc((100% / 6) - 13px)}}.show-text-card,.hide-text-card{line-height:24px}.show-text-card{margin:16px;content-visibility:auto;contain:layout paint;contain-intrinsic-size:400px;overflow-anchor:none;border-radius:10px;background-color:#2e6d95;height:auto;position:relative;color:#fff;font-size:14px;overflow-anchor:auto}.show-text-card h1,.hide-text-card h1{font-size:18px;padding:0 0 10px 0}.show-text-card h2,.hide-text-card h2{font-size:16px;padding:10px 0 10px 0}.show-text-card h3,.hide-text-card h3{font-size:15px;padding:0 0 10px 0}.show-text-card ol,.hide-text-card ol{margin-top:0;margin-bottom:0}.show-text-card ul,.hide-text-card ul,.show-text-card dl,.hide-text-card dl{list-style-type:disc;margin-left:40px}.show-text-card a{color:#fff;text-decoration:none;font-weight:700}.show-text-card .show-text{height:100%;overflow:hidden auto;padding:30px 30px 0}.show-text-card .show-button{background-color:#2e6d95;height:50px;padding-top:10px;padding-left:30px}.show-text-card .show-button .button-span{cursor:pointer;-webkit-text-decoration:none;text-decoration:none;color:#fdb504;font-weight:700}.hide-text-card{margin:16px;content-visibility:auto;contain:layout paint;contain-intrinsic-size:400px;overflow-anchor:none;border-radius:10px;background-color:#2e6d95;height:200px;position:relative;color:#fff;font-size:14px;overflow-anchor:auto}.hide-text-card a{color:#fff;text-decoration:none;font-weight:700}.hide-text-card .show-text{height:100%;overflow:hidden auto;padding:30px 30px 0}.hide-text-card .show-button{position:absolute;bottom:0;left:0;right:4px;background:linear-gradient(180deg,rgba(19,20,30,0) 0%,#2e6d95 35.42%);height:50px;padding-top:40px;padding-left:30px}.hide-text-card .show-button .button-span{cursor:pointer;-webkit-text-decoration:none;text-decoration:none;color:#fdb504;font-weight:700}#moneyNoticeMessage{padding:4px 10px 4px 10px;position:fixed;z-index:1050;font-family:Verdana;min-width:300px;max-width:430px;width:80%;min-height:160px;color:#00335e;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;-moz-box-shadow:0 0 11px #000;-webkit-box-shadow:0 0 11px #000;box-shadow:0 0 11px #000;left:50%;top:50%;transform:translate(-50%,-50%);opacity:1;background-image:url(/images/blue/msgBoxBackGround.png)}#moneyNoticeMessage div.msgBoxTitle{padding:5px 0 5px 0;font-size:16px;font-weight:lighter;color:#00335e;width:100%;border-bottom:1px solid #002c5f}#moneyNoticeMessage div.msgBoxImage{margin:0 5px 0 0;display:block;float:left;height:75px;width:75px}#moneyNoticeMessage div.msgBoxImage img{height:75px;width:75px}#moneyNoticeMessage div.msgBoxContainer{line-height:18px;padding:10px 0 0 0}@media screen and (min-width:390px){#moneyNoticeMessage div.msgBoxContainer{line-height:22px}}@media screen and (min-width:523px){#moneyNoticeMessage div.msgBoxContainer{line-height:22px;font-size:15px}}#moneyNoticeMessage div.msgBoxButtons{display:inline-block;width:100%;text-align:right}#moneyNoticeMessage div.msgBoxButtons input[type='button']{cursor:pointer;margin:2px;height:35px;width:90px;border:1px solid #AFAFAF;background-color:#004076;color:#FFF;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;outline:none}#moneyNoticeMessage div.msgBoxButtons input[type='button']:hover{background-color:#00549c;color:#fff}#moneyNoticeMessage div.msgBoxButtons input[type='button']:active{background-color:#AAA;color:#fff}#moneyNoticeMessage div.msgBoxButtons input[type='button']:focus{outline:none;border:solid 2px #FC6}#moneyNoticeMessage div.msgBoxButtons input[type='button']::-moz-focus-inner{outline:none;border:none}	</style>
-
-</head>
-
-<body><div class="WholeContainer">
-
-<div class="header">
-	        <div class="header_left" style="width:800px;">
-        	<div style="float:left;width:85px;text-align:left;"><a href='/'><img src="/images/blue/logo.png" alt="yad.com" style='width:65px;height:48px;'></a></div>
-            <div class="HeaderMenuPC">
-            <a href="/new-games">New</a>
-            <a href="/best-games">Best</a>
-            <a href="/hot-games">Hot</a>
-            <a href="/car-games">Car Games</a>
-            <a href="/3d-games">3D Games</a>
-            <a href="/played-games" rel="nofollow">Played</a>
-            <a href="/favourite-games" rel="nofollow">Favourite</a>
-            <a href="/tags">Tags</a>
-            </div>
-        </div>
-        
-        <div class="header_right">
-            <img src="/images/blue/search.png" id="searchImg" alt="search" style='width:40px;height:40px;padding-top:5px;'>
-        </div>
-    </div>
-
-<div id="searchDiv">
-	<form action="/presearch.php" method="post" id="searchForm">
-    <div id="keywordsDiv"><input type='search' name="keywords" placeholder="search a game" id="keywordsInput" value=""></div>
-    <div id="submitDiv"><input type="submit" name="submit" value="GO" id="submitInput"></div>
-    </form>
-</div>
-
-	<div style="clear:both;height:5px;"></div>
-
-
-<link rel="stylesheet" type="text/css" href="/css/blue/game_pc.css?2024040802">
-<div id="game_middle">
-	<div id="LeftAdDiv">
-        
-<style>
-.PC_playgame_left_AD { width: 160px; height: 600px; }
-</style>
-<!-- yad_PC_playgame_left -->
-<ins class="adsbygoogle PC_playgame_left_AD"
-     style="display:inline-block"
-     data-ad-client="ca-pub-8878716159434368"
-     data-ad-slot="8270692323"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-	</div>
-
-	<div id="LeftGamesThumbDiv">
-		        					<div class="thumb" id='game-4628'><a href="/60-Seconds-Atomic-Adventure"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/60-Seconds-Atomic-Adventure.jpg' alt="60 Seconds! Atomic Adventure" /><div class='GameName'>60 Seconds! Atomic Adventure</div></a></div>
-            		        					<div class="thumb" id='game-4648'><a href="/Perfect-Piano-2"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Perfect-Piano-2.jpg' alt="Perfect Piano 2" /><div class='GameName'>Perfect Piano 2</div></a></div>
-            		        					<div class="thumb" id='game-4352'><a href="/Hide-Online-Hunters-Vs-Props"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Hide-Online-Hunters-Vs-Props.jpg' alt="Hide Online - Hunters Vs Props" /><div class='GameName'>Hide Online - Hunters Vs Props</div></a></div>
-            		        					<div class="thumb" id='game-4381'><a href="/Sausage-Run"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Sausage-Run.jpg' alt="Sausage Run" /><div class='GameName'>Sausage Run</div></a></div>
-            		        					<div class="thumb" id='game-3255'><a href="/Clown-Park-Hide-And-Seek"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Clown-Park-Hide-And-Seek.jpg' alt="Clown Park - Hide And Seek " /><div class='GameName'>Clown Park - Hide And Seek </div></a></div>
-            		        					<div class="thumb" id='game-3604'><a href="/Fall-Guys-Party"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Fall-Guys-Party.jpg' alt="Fall Guys Party" /><div class='GameName'>Fall Guys Party</div></a></div>
-            		        			        			        			        			        			        			        			        			        			        				</div>
-	
-	<div id="pregamediv">
-		<div id="pregamediv_ad"> 
-		<!--
-		<div id="pregamediv_ad" style="cursor: pointer;">
-		-->
-            <div id="adTitle">
-                <span class="titleText">
-                    <a href='#' onClick="javascript:return false;" id="ClickToPlayHref"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Hospital-Escaper.jpg' alt="Hospital Escaper" /><button id="ClickToPlayButtton" style="width:210px;height:44px;"><img src="/images/blue/play_loader3.gif" srcset="/images/blue/play_loader.svg" style="width:32px;height:32px;margin-top:3px;" alt="loading"></button></a><br><br>
-                    <div class="GameNameText" style="font-size:14px;">Hospital Escaper (<img src="/images/blue/thumbup20.png" style="width:20px;height:20px;padding-top: 12px;" alt="rating"> 99%/16)</div>
-                </span>
-            </div>
-            <div id="adsContainer">
-                <div id="adContainer"></div>
-                <video id="videoElement"></video>
-            </div>
-		</div>
-		<div id="SkipAdDiv"><a href="javascript:SkipAdAndShowGame();" rel="nofollow">Click to Start Game Now</a></div>
-	</div>
-	
-	<div id="GameDiv">
-		<div id="GameDiv_OpareateDiv">
-			<div id="GameNameDiv">
-            	<b>Hospital Escaper</b>
-            </div>	
-			<div id="GameOpareateDiv">
-				<span id="VoteGameDiv">
-            	<a href="#" onclick="RateGame(4645,1);return false;" rel="nofollow"><img src="/images/blue/thumbup.png" alt="I like the game"></a>
-                <a href="#" onclick="RateGame(4645,0);return false;" rel="nofollow"><img src="/images/blue/thumbdown.png" alt="I do not like the game"></a>
-            	</span>
-                <span id='game_favourite'>
-                <a href="#" onclick="UpdateFavourites();return false;" rel="nofollow" title='Add To My Favourites'><img src="/images/blue/game_addfavourite.png" alt="favourite"></a>
-                </span>
-            	<a href="#" onclick="EnterFullScreen();return false;" rel="nofollow"><img src="/images/blue/game_fullscreen.png" alt="fullscreen"></a>
-            	<a href="#" onclick="ReplayGame();return false;" rel="nofollow"><img src="/images/blue/refresh.png" alt="replay"></a>
-            </div>	
-		</div>
-		<div id="GameDiv_GameContainer">
-			<div id="GameDiv_ShowGameDiv">
-                    <iframe id="game_frame" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" allow="autoplay" webkit-playsinline="true" scrolling="no" seamless frameborder="0" style="display: block; overflow: hidden; width: 100%; height: 100%;" src="https://www.yad.com/games/Hospital-Escaper/index.html?yad" loading='lazy'></iframe>
-			</div>
-		</div>
-
-	</div>
-	
-	<div id="RightGamesThumbDiv">				
-		        					<div class="thumb" id='game-4612'><a href="/Bus-Simulator-Driving-3d"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Bus-Simulator-Driving-3d.jpg' alt="Bus Simulator Driving 3D" /><div class='GameName'>Bus Simulator Driving 3D</div></a></div>
-            		        					<div class="thumb" id='game-4567'><a href="/Pet-Makeup-Master"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Pet-Makeup-Master.jpg' alt="Pet Makeup Master" /><div class='GameName'>Pet Makeup Master</div></a></div>
-            		        					<div class="thumb" id='game-4621'><a href="/Sweet-Bakery-Girls-Cake"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Sweet-Bakery-Girls-Cake.jpg' alt="Sweet Bakery Girls Cake" /><div class='GameName'>Sweet Bakery Girls Cake</div></a></div>
-            		        					<div class="thumb" id='game-4602'><a href="/Princess-Pet-Beauty-Salon"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Princess-Pet-Beauty-Salon.jpg' alt="Princess Pet Beauty Salon" /><div class='GameName'>Princess Pet Beauty Salon</div></a></div>
-            		        					<div class="thumb" id='game-4576'><a href="/Epic-Banana-Run-Merge-Master"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Epic-Banana-Run-Merge-Master.jpg' alt="Epic Banana Run: Merge Master" /><div class='GameName'>Epic Banana Run: Merge Master</div></a></div>
-            		        					<div class="thumb" id='game-4620'><a href="/Ninja-Hero-Fight"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Ninja-Hero-Fight.jpg' alt="Ninja Hero Fight" /><div class='GameName'>Ninja Hero Fight</div></a></div>
-            		        			        			        			        			        			        			        			        			        			        			        			        			        				</div>		
-</div>
-
-
-<div id="RightAdTopDiv">
-	Advertisement<br>
-    
-<!-- yad_PC_playgame_right_top_responsive_20221030 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:250px;"
-     data-ad-client="ca-pub-8878716159434368"
-     data-ad-slot="7580363777"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</div>
-<div id="RightAdMiddleDiv">
-	Advertisement<br>
-    
-<!-- yad_PC_playgame_right_middle_responsive_20221030 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8878716159434368"
-     data-ad-slot="1206527116"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</div>
-    
-<div style="clear:both;"></div>
-
-<div id="belowGameDiv" style="width:1000px;box-sizing:border-box;">
-    <div id="game_bottom_ad">
-        
-<!-- yad_PC_playgame_middle_responsive_20221030 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:970px;height:90px"
-     data-ad-client="ca-pub-8878716159434368"
-     data-ad-slot="3806438597"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    </div>
-    
-    <div style="clear:both;height:10px;"></div>
-        
-    <div class="game_bottom_similiargames">				
-                                                                                                                                                                                                                        <div class="thumb" id='game-4641'><a href="/Asmr-Makeup-Spa-Salon"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Asmr-Makeup-Spa-Salon.jpg' alt="Asmr Makeup Spa Salon"  loading='lazy'/><div class='GameName'>Asmr Makeup Spa Salon</div></a></div>
-                                                                <div class="thumb" id='game-4542'><a href="/Bro-Race-Count"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Bro-Race-Count.jpg' alt="Bro Race Count"  loading='lazy'/><div class='GameName'>Bro Race Count</div></a></div>
-                                                                <div class="thumb" id='game-4634'><a href="/Dop-3-Draw-One-Part"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Dop-3-Draw-One-Part.jpg' alt="Dop 3: Draw One Part"  loading='lazy'/><div class='GameName'>Dop 3: Draw One Part</div></a></div>
-                                                                <div class="thumb" id='game-4615'><a href="/Satisfying-Organization-Games"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Satisfying-Organization-Games.jpg' alt="Satisfying Organization Games"  loading='lazy'/><div class='GameName'>Satisfying Organization Games</div></a></div>
-                                                                <div class="thumb" id='game-4625'><a href="/Ramp-Car-Games-Gt-Car-Stunts"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Ramp-Car-Games-Gt-Car-Stunts.jpg' alt="Ramp Car Games: GT Car Stunts"  loading='lazy'/><div class='GameName'>Ramp Car Games: GT Car Stunts</div></a></div>
-                                                                <div class="thumb" id='game-4547'><a href="/Snake-Io"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Snake-Io.jpg' alt="Snake.io"  loading='lazy'/><div class='GameName'>Snake.io</div></a></div>
-                                                                <div class="thumb" id='game-4600'><a href="/Dop-Puzzle-Erase-Fun"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Dop-Puzzle-Erase-Fun.jpg' alt="Dop Puzzle: Erase Fun"  loading='lazy'/><div class='GameName'>Dop Puzzle: Erase Fun</div></a></div>
-                                                                <div class="thumb" id='game-4549'><a href="/Stretch-Legs-Jump-King-3d"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Stretch-Legs-Jump-King-3d.jpg' alt="Stretch Legs: Jump King 3D"  loading='lazy'/><div class='GameName'>Stretch Legs: Jump King 3D</div></a></div>
-                                                                                                                                                                                                                                                                                                                                                                                                <div class="thumb" id='game-4317'><a href="/Pinball-Master"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Pinball-Master.jpg' alt="Pinball Master"  loading='lazy'/><div class='GameName'>Pinball Master</div></a></div>
-                                                                <div class="thumb" id='game-2082'><a href="/No-One-Escape"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/No-One-Escape.jpg' alt="No One Escape!"  loading='lazy'/><div class='GameName'>No One Escape!</div></a></div>
-                                                                <div class="thumb" id='game-4351'><a href="/2-Player-Games-Crazy-Challenge"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/2-Player-Games-Crazy-Challenge.jpg' alt="2 Player Games Crazy Challenge"  loading='lazy'/><div class='GameName'>2 Player Games Crazy Challenge</div></a></div>
-                                                                <div class="thumb" id='game-3831'><a href="/Rescue-The-Bro"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Rescue-The-Bro.jpg' alt="Rescue The Bro"  loading='lazy'/><div class='GameName'>Rescue The Bro</div></a></div>
-                                                                <div class="thumb" id='game-4286'><a href="/Attack-Hole-Online"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Attack-Hole-Online.jpg' alt="Attack Hole Online"  loading='lazy'/><div class='GameName'>Attack Hole Online</div></a></div>
-                                                                <div class="thumb" id='game-3453'><a href="/Truth-Runner"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Truth-Runner.jpg' alt="Truth Runner"  loading='lazy'/><div class='GameName'>Truth Runner</div></a></div>
-                                                                <div class="thumb" id='game-3424'><a href="/Time-Shooter-3-Swat"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Time-Shooter-3-Swat.jpg' alt="Time Shooter 3: SWAT"  loading='lazy'/><div class='GameName'>Time Shooter 3: SWAT</div></a></div>
-                                                                <div class="thumb" id='game-2384'><a href="/Pencil-Rush-Online"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Pencil-Rush-Online.jpg' alt="Pencil Rush Online"  loading='lazy'/><div class='GameName'>Pencil Rush Online</div></a></div>
-                                                                <div class="thumb" id='game-4313'><a href="/Thief-Puzzle-Online"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Thief-Puzzle-Online.jpg' alt="Thief Puzzle Online"  loading='lazy'/><div class='GameName'>Thief Puzzle Online</div></a></div>
-                                                                <div class="thumb" id='game-2399'><a href="/Bounce-Big-Online"><img src='https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/thumb/Bounce-Big-Online.jpg' alt="Bounce Big Online"  loading='lazy'/><div class='GameName'>Bounce Big Online</div></a></div>
-                            
-            <div class="game-category">
-                <div class="title">
-                    Game Categories
+<html>
+<body>
+    <div id="__next">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/style.css" />
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/media.css" />
+        <div>
+           <section class="my-5">
+                <div class="container">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <h4>Play online</h4><br/><br/>
+                        <div class="gameArea d-flex justify-content-center align-items-center w-100 position-relative">
+                            <a href="https://348.go.qureka.com/intro">
+                                <div class="PlayBtn" id="playBtn"></div>
+                               <div class="blackLayer" id="playBtn"></div><img src="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/Game%20On%20(1).png" alt="Game" draggable="false" class="img-fluid bannerImg" /></div>
+                            </a>
+                      </div>
+                        <div class="w-100 optiomsBar d-flex flex-column flex-lg-row justify-content-start justify-content-lg-between align-items-center p-3 cusOver">
+                            <div class="d-none d-lg-flex justify-content-start justify-content-lg-end align-items-center mb-4 mb-lg-0">
+                    
+                                <div class="ms-2 d-flex flex-column "><span class="cl-b fw-bold f-20 ">Games</span><span class="cl-peta d-flex justify-content-start align-items-center"><img src="https://thopgames.com/assets/Game/watch.png" alt="watchlist icon" draggable="false" class="me-1"/>50k</span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="list">
-                                            <a href="/Html-5-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Html-5.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Html 5 Games</span>
-	</div>
-</a>
-                                            <a href="/Timing-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Timing.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Timing Games</span>
-	</div>
-</a>
-                                            <a href="/Relaxing-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Relaxing.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Relaxing Games</span>
-	</div>
-</a>
-                                            <a href="/Kids-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Kids.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Kids Games</span>
-	</div>
-</a>
-                                            <a href="/3d-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/3d.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">3D Games</span>
-	</div>
-</a>
-                                            <a href="/Doctor-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Doctor.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Doctor Games</span>
-	</div>
-</a>
-                                            <a href="/Avoid-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Avoid.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Avoid Games</span>
-	</div>
-</a>
-                                            <a href="/Boy-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Boy.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Boy Games</span>
-	</div>
-</a>
-                                            <a href="/Hypercasual-Unblocked-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Hypercasual-Unblocked.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Hypercasual Unblocked Games</span>
-	</div>
-</a>
-                                            <a href="/Escape-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Escape.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Escape Games</span>
-	</div>
-</a>
-                                            <a href="/Collect-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Collect.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Collect Games</span>
-	</div>
-</a>
-                                            <a href="/Shop-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Shop.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Shop Games</span>
-	</div>
-</a>
-                                            <a href="/Hair-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Hair.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Hair Games</span>
-	</div>
-</a>
-                                            <a href="/War-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/War.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">War Games</span>
-	</div>
-</a>
-                                            <a href="/Match-3-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Match-3.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Match 3 Games</span>
-	</div>
-</a>
-                                            <a href="/Parking-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Parking.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Parking Games</span>
-	</div>
-</a>
-                                            <a href="/Wedding-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Wedding.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Wedding Games</span>
-	</div>
-</a>
-                                            <a href="/Bow-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Bow.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Bow Games</span>
-	</div>
-</a>
-                                            <a href="/Lego-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Lego.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Lego Games</span>
-	</div>
-</a>
-                                            <a href="/Dog-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Dog.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Dog Games</span>
-	</div>
-</a>
-                                            <a href="/Swimming-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Swimming.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Swimming Games</span>
-	</div>
-</a>
-                                            <a href="/Fruit-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Fruit.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Fruit Games</span>
-	</div>
-</a>
-                                            <a href="/Virus-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Virus.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Virus Games</span>
-	</div>
-</a>
-                                            <a href="/Grooming-games">
-	<div class="item">
-		<img src="https://www.yad.com/cdn-cgi/image/quality=78,fit=cover,format=auto/tag-thumb/Grooming.jpg" alt="" loading="lazy"/>
-	</div>
-	<div class="name">
-		<span class="text">Grooming Games</span>
-	</div>
-</a>
-                                    </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Kids Instruments is an app created especially for kids and parents to learn play Instrument<br/><br/>play musical instruments, wonderful songs, exploring different sounds and develop musical skills.<br/><br/>The interface of
+                                the app is colourful and bright. It will interest you and please your child as he will learn music while playing exciting games.<br/><br/>Piano, Electric guitar, Xylophone and Drums percussion. Each instrument has real
+                                sounds and representation. The child can give free rein to their imagination to compose their own melodies in the different instruments.<br/><br/>The child can select to play the Piano, Electric Guitar, Xylophone and Drum
+                                percussion. Each musical instrument has real sounds and representation. The child can give free rein to their imagination to compose their own melodies in the different instruments.<br/><br/>Enjoy this colorful and fun
+                                application knowing the musical instruments and creating songs with the sounds and melodies that each instrument has.<br/><br/></p>
+                            <div class="d-flex flex-wrap">
+                                <div class="cusBadge">
+                                        <div class="databg"></div><img src="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/WELCOME.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" />
+                                </div>
+                                <div class="cusBadge">
+                                        <div class="databg"></div><img src="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/WELCOME%20(1).png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" />
+                                </div>
+                                <div class="cusBadge">
+                                      <div class="databg"></div><img src="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/WELCOME%20(2).png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" />
+                                </div>
+                                <div class="cusBadge">
+                                     <div class="databg"></div><img src="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/WELCOME%20(3).png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" />
+                                </div>
+                                <div class="cusBadge">
+                                      <div class="databg"></div><img src="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/WELCOME%20(4).png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" />
+                                </div>
+                                <div class="cusBadge">
+                                     <div class="databg"></div><img src="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/WELCOME%20(5).png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" />
+                                </div>
+                                <div class="cusBadge">
+                                      <div class="databg"></div><img src="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/WELCOME%20(6).png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" />
+                                </div>
+                                <div class="cusBadge">
+                                     <div class="databg"></div><img src="https://raw.githubusercontent.com/RiseupInfotech004/AtmeGames-Thop/main/WELCOME%20(1).png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div>
+                 <section class="my-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="Secondpage.html">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/musicianmagic.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                   
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/pixelfiller.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/zombieattack.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/roadrace2d.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/reversespaceriding.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/bemillionaire.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/burningball.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/dashingdonut.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/harvestveggie.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/icymatch.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/halloweenhooks.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/christmasgift.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/christmasgift.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/alienonearth.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/alienonearth.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/angrybubble.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/perfectpoolshot.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/diamondrobber.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/dragonfish.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/fishcatcher.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/golfpost.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/highwayhero.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/joytoytrain.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/movingsparrow.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/universaladvanture.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/jallybellyjam.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/darkforest.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/cookiesboockies.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/ludo.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/cricketworldcup.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/2048game.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/shoottogiantbats.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/jumpandcollectcoins.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/makeabridgeandgogetdiamond.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/fighterjet.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/protectredindianman.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/droptheappleintomouth.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/touchthealphabetintheorder.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/drivesafe.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/coinsnake.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/spacebattle.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/advantureousboyrun.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/chickenshooter.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/crossyroad.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/cutedressup.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/yummycandies.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/jellyworld.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/duckhunt.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/zombiehunter.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/gopanda.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/motoracer.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/christmasholiday.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/balloonpop.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/choosetruecolors.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/airbattlemission.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/stickman.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/flowershooter.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/runningninja.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/runningninja.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/supercandy.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/colormatch.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/ballout.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/arrowpatching.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/ballbounceescape.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/ballbouncerwall.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/bottlegarbage.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/bottlegarbage.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/brainexcercisegame.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/carbreaker.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/christmassantarun.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/colorjumpgame.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/darkknightrider.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/dashcolorswitch.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/eggbucketmaster.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/eggcatcher.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/endlessninjarun.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/fillthedot.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/firealarmresquers.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/flyingtriangle.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/goalpostchallenge.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/halloweenrun.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/happymood.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/heroboxjumping.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/jewelinthrowchallenge.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/lemonjuicer.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/mannequinheadjump.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/mrpingjumpingjoy.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/nanoraceescape.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/noobvspro.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/perfectrotare.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/pixelninza.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/pocketjumparcade.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/pongsdot.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/potfiller.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/rocketpilot.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/rollingcubeadvantures.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/romeoswiftracer.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/saveyourpuppies.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/sawsescapes.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/shootzombie.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/speedsquarerunner.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/squareescape.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/starfallescape.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/stressreleasingdots.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/tapcounterchallenge.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/tennisballarcade.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/towerbalancer.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 m-0 p-0 p-2">
+                            <a href="https://u.vibemods.online/zsmit/">
+                                <div class="MainHVR d-flex justfy-content-center align-items-center">
+                                    <div class="databg"></div><img src="https://thopgames.com/assets/Game/logos/waroftank.png" alt="Game Images" draggable="false" class="img-fluid HvrIMG mx-auto" /></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
             </div>
         </div>
-    
-        <div class="hide-text-card" id="bottom-text-card">
-            <div class="show-text"  style="overflow: hidden;">
-                <h1>Hospital Escaper</h1><h2>Play [Hospital Escaper] Game Online On Yad.com</h2><p>
-  Hospital Escaper is a unique and fun casual game. I'm sure everyone as a child was afraid of going
-  to the hospital for injections and longed to escape, this is a game of doctors and patients. In
-  total, it contains two modes, doctor and patient. If you choose a doctor, you need to capture all
-  the patients within the time limit. If you are patient, you need to run as hard as you can in the
-  time limit, climb rocks, dodge chases, and survive! Don't forget to collect diamonds as you play
-  to unlock more cool wings in the store. Do whatever it takes to escape from the hospital! If you
-  like to play this kind of escape game, you can visit our
-  <a href="https://www.yad.com/" target="_blank">Yad</a>
-  website, more popular games are waiting for you to explore, guaranteed to make you addicted!
-</p>
-<h2>Features</h2>
-<ul>
-  <li>Exquisite 3D models and smooth operation</li>
-  <li>
-    Show 30 seconds to complete the task so that you can experience the tense and exciting game
-    atmosphere
-  </li>
-  <li>Free, you can play anytime, anywhere</li>
-</ul>
- 
-		
-		<h2>How to play Hospital Escaper?</h2><h4>PC</h4>
-<p>Mouse click and drag to move</p>
-<h4>Mobile</h4>
-<p>Tap and slide to move</p>
-
-		
-		<h2>Game Rating</h2>99% of 16 players like it. The game was played 1,283 times since April-18th-2024
-		
-		<h2>Can I play Hospital Escaper on desktops, mobile phones and tablets?</h2>
-		Yes, of course. Hospital Escaper can be played on your computers and mobile devices like android phones, iphones and tablets.
-
-		<h2>Can I Play The Game For Free?</h2>Yes, you can play all games online for free on YAD. Just open the page in a Web browser (desktop, mobile or pad) and enjoy yourself.<br>So, what are you waiting for? If you feel happy when playing our games, remember to bookmark yad.com and share it to your friends. Have fun!
-            </div>
-            <div class="show-button">
-                <span class="button-span" id="bottom-button-span" onclick="changeShow()">Show more</span>
-            </div>
-        </div>
-</div>
-
-<div style="clear:both;height:20px;"></div>
-
-<audio autoplay>
-<source src="/images/sound/yad.ogg" type="audio/ogg">
-<source src="/images/sound/yad.m4a" type="audio/mpeg">
-<source src="/images/sound/yad.mp3" type="audio/mpeg">
-</audio>
-
-<script type="text/javascript">
-var google_tag_params = {
-gameType: "Kids,Boy,Html 5,Avoid,3D,Hypercasual Unblocked,Relaxing,Collect,Timing,Escape,Doctor"
-};
-</script> 
-<script>dataLayer.push({ 'event': 'visit_game_page','gameNameId':'Hospital-Escaper' });</script></div>
-
-<div class="foot">
-    <a href="/">Home</a> - 
-        <a href="/partners.php" target="_blank">Partners</a> - 
-    <a href="/ourgames.php" target="_blank">Our Games</a> - 
-        <a href="https://www.topgames.com" target="_blank" rel="nofollow">Top Games</a> - 
-    <a href="/contact.php" target="_blank">Contact Us</a> - 
-    <a href="/page/Terms-Of-Use" target="_blank">TOS</a> - 
-    <a href="/page/Privacy-Policy" target="_blank">Privacy</a>
-     &copy;  <a href="/">YAD.COM</a>
-</div>
-
-<div id="backToTop"></div>
+    </div>
 </body>
+
 </html>
