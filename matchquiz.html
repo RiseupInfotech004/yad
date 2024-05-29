@@ -1,0 +1,625 @@
+
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onewebify.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+      
+
+
+    
+    
+    
+      
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+     googletag.defineSlot('/23032124618/Smit_LR1', [200, 200], 'div-gpt-ad-1714570192745-0').addService(googletag.pubads());
+googletag.defineSlot('/23032124618/smit_LR2', [[200, 200], [250, 250]], 'div-gpt-ad-1714570194619-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <script>
+    window.googletag = window.googletag || { cmd: [] };
+    var interstitialSlot;
+    googletag.cmd.push(function () {
+       interstitialSlot = googletag.defineOutOfPageSlot('/23032124618/smit_Inter',googletag.enums.OutOfPageFormat.INTERSTITIAL).addService(googletag.pubads());
+      googletag.enableServices();
+    });
+    googletag.cmd.push(function () {
+      googletag.display(interstitialSlot);
+    });
+  </script>
+  
+    
+    
+    <style>
+        *{
+            line-height: 1.4;
+            transition-timing-function:  ease-in;
+        }
+          :root {
+        --hue-neutral: white;
+        --hue-wrong: red;
+        --hue-correct: green;
+    }
+    .animation{
+        animation-name:'anime';
+        animation-duration: 2000;
+        overflow: visible;
+    }
+    @keyframes anime{
+        0%     {background-color:red;}
+    50.0%  {background-color:#000000;}
+    100.0%  {background-color:red;}
+    }
+    *{
+      color:white;
+    }
+    body{
+        background-color: #272c93;
+        margin-top: 10px;
+    }
+    
+    ul>li{
+        word-wrap: break-word;
+    }
+    #question-container{
+        background-color: #272c93;
+        border-radius: 10px;
+        margin:5px
+    }
+    .btn-grid{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 1rem;
+    }
+    .btn{
+        --hue: var(--hue-neutral);
+        background-color: #f5f6ff;
+        color: hsl(237, 76%, 25%);
+        margin: 1rem;
+        padding: 1rem;
+        font-weight: bold;
+    }
+    .btn:hover {
+        border-color: black;
+      }
+    #question{
+        padding-top: 1rem;
+    }
+    .btn.correct {
+        --hue: var(--hue-correct);
+        color: black;
+        transition: all 0.3s;
+        animation-name: example;
+      animation-duration: 0.5s;
+      background-color: green;
+    }
+    @keyframes example {
+        from,
+        to{
+            transform:translateX(0px);
+        }
+        50%{
+            transform: translateX(8px) ;
+        }
+        83%{
+            transform: translateX(-8px) ;
+        }
+    }
+    .btn.wrong {
+        --hue: var(--hue-wrong);
+        color:white;
+        background-color: red;
+        transition: all 0.5s;
+    }
+    .start-btn {
+        font-size: x-small;
+        font-weight: bold;
+        padding: 10px ;
+    }
+    .hide {
+        display: none;
+    }
+    #wrong-1:focus{
+        background-color: var(--hue-wrong);
+        transition: all 0.5s;
+        background-color: red;
+    }
+    #correct:focus{
+        background-color: var(--hue-correct);
+        transition: all 0.5s;
+        animation-name: example;
+        animation-duration: 0.5s;
+        background-color: green;
+    }
+    #wrong-2:focus{
+        background-color: var(--hue-wrong);
+        transition: all 0.5s;
+        background-color: red;
+    }
+    #question-container1{
+        background-color: #272c93;
+        margin: 10px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+    .final-answer{
+      font-weight: bold;
+      text-transform: capitalize;
+      color:gold;
+      background-color: #272c93;
+      border-radius: 10px;
+    }
+    .final-answer1{
+        font-size: 25px;
+      padding:20px;
+      margin:10px;
+      color: white;
+      font-weight: bold;
+      background-color: orange;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border: #4c51af solid 1px;
+      border-radius: 10px;
+      animation-name: final;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+    }
+    
+    .final-answer1:focus{
+        background-color: rgb(196, 140, 36);
+    }
+    @keyframes final {
+        0% {
+            width: 50vw;
+        }
+        50% {
+            width: 55w;
+    
+        }
+        100%{
+            width: 50vw;
+        }
+    }
+    .btn1, .btn2, .btn3{
+        background-color: white;
+        color:black;
+        padding:1rem;
+        margin: 1rem;
+        border-radius: 5px;
+        border: 0ch;
+        transition: all 0.5s;
+    }
+    #heading{
+        border: #4c51af solid 1px;
+        border-radius: 10px;
+        padding: 0;
+        margin: 0;
+        box-shadow: inset 0 3px 13px #353a9b, 0 -1px 10px #3b41a7;
+        background-color: #272c93;
+    }
+    i{
+        margin-right:5px
+    }
+    @media only screen and (min-width: 600px) {
+        *{
+            line-height: 2;
+            transition-timing-function:  ease-in;
+        }
+        #question-container{
+        padding-top: 40px;
+    }
+    #question-container *{
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    button{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    }
+        </style>
+    </head>
+    <body>
+    <center>
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    </div>
+    </center>
+    <div class="container ">
+    <div class="col">
+    <div class="row-4 text-center">
+    <div class="row-4 row-sm-4">
+    <div id="banner-ad" class="adv">
+      
+<center>
+    
+    
+    
+       <p class="text-center" style="font-size: 10px ;margin:0;padding:0">SPONSORED</p>
+      <div style="height: 200px; overflow-y: scroll">
+         
+            
+<!-- /23032124618/Smit_LR1 -->
+<div id='div-gpt-ad-1714570192745-0' style='min-width: 200px; min-height: 200px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1714570192745-0'); });
+  </script>
+</div>
+</center> 
+  
+    </div>
+    </div>
+    </div>
+    <div id="heading" class="row-1 row-sm-1 text-center">
+        <div style="border-bottom: #565e3a solid 1px;">
+    <h2 id="firstheading" style="color: whiteyellow; font-weight: bolder;">Let's get Started</h2>
+    <p id="firstpara">just answer the questions and explore...</p>
+    </div>
+    <div id="question-container" class=" qsn-container text-center row-4 row-sm-4">
+    <div id="question" style="color: white;font-weight: bold;" class="text-center">
+    </div>
+    <div id="answer-buttons" class="btn-grid ">
+    <button id="wrong-1" class="btn1"></button>
+    <button id="correct" class="btn2"></button>
+    <button id="wrong-2" class="btn3"></button>
+    </div>
+    </div>
+    <div class="letsgo text-center"></div>
+    </div>
+    <div class="controls row-1 row-sm-1">
+    <button id="start-btn" class="start-btn btn hide"></button>
+    <button id="next-btn" class="next-btn btn hide"></button>
+    
+    
+    </div>
+    
+    <div style="font-family: Rubik;margin-top: 40px;" class="row-2 ">
+    <h4>A quik knowledge test challenge!</h4>
+    <div style="list-style:none">
+    <li><i class="fa fa-check-circle" aria-hidden="true"></i>Play quizzes in Many categories like Cricket, football, World cup, geography, business, Finance & more</li>
+    <li><i class="fa fa-check-circle" aria-hidden="true"></i>Compete with thousands of other quiz enthusiasts</li>
+    <li><i class="fa fa-check-circle" aria-hidden="true"></i>Integrate in your app/website <a href="https://onewebify.com/">onewebify.com</a></li>
+    <li><i class="fa fa-check-circle" aria-hidden="true"></i>Played & trusted by over 10 million users</li>
+    </div>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>
+    <script>
+      const startButton = document.getElementById('start-btn')
+    const nextButton = document.getElementById('next-btn')
+    const questionContainerElement = document.getElementById('question-container')
+    const questionElement = document.getElementById('question')
+    const answerButtonsElement = document.getElementById('answer-buttons')
+    const heading=document.getElementById('heading')
+    const firstheading=document.getElementById('firstheading')
+    const firstpara=document.getElementById('firstpara')
+    const test = document.getElementById('wrong-1')
+    const test1 = document.getElementById('correct')
+    const test2 = document.getElementById('wrong-2')
+    const letgo=document.querySelector('.letsgo')
+    
+   
+
+    let shuffledQuestions, currentQuestionIndex
+    
+    test.addEventListener('click', startGame1)
+    test1.addEventListener('click', startGame1)
+    test2.addEventListener('click', startGame1)
+
+    window.onload = function() {
+    startGame()
+    };
+
+    function startGame() {
+    startButton.classList.add('hide')
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    questionContainerElement.classList.remove('hide')
+    setNextQuestion()
+    }
+    
+    function setNextQuestion() {
+    resetState()
+    showQuestion(shuffledQuestions[currentQuestionIndex])
+    }
+
+    function resetState() {
+    clearStatusClass(document.body)
+    nextButton.classList.add('hide')
+    while (answerButtonsElement.firstChild) {
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    }
+    }
+
+    function showQuestion(question) {
+    questionElement.innerText = question.question
+    question.answers.forEach(answer => {
+    const button = document.createElement('button')
+    button.innerText = answer.text
+    button.classList.add('btn')
+    if (answer.correct) {
+    button.dataset.correct = answer.correct
+    }
+    button.addEventListener('click', selectAnswer)
+    answerButtonsElement.appendChild(button)
+    })
+    }
+    function disablebtn(){
+        document.getElementsByTagNameNS("button").disablebtn=true
+    }
+
+    function selectAnswer(e) {
+    const selectedButton = e.target
+    selectedButton.disabled=true
+    const correct = selectedButton.dataset.correct
+    if(correct){
+        count=count+1
+    }
+    setStatusClass(document.body, correct)
+    
+    Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct)
+    })
+    if (shuffledQuestions.length > currentQuestionIndex +6) {
+        
+    nextQuestion()
+    } else {
+
+        animation()
+
+        
+        function animation(){
+            result()
+        }
+        
+        function result(){
+            answerButtonsElement.classList.add('hide')
+            questionElement.classList.add('hide')
+    
+            firstheading.innerText='Final Result'
+            firstpara.innerText='You completed every questions in this quiz'
+    
+            questionContainerElement.id='question-container1'
+    
+            const div0 = document.createElement('img')
+            div0.src = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu2OLIVS1KXkg_Yy6hXx8kftIgXQuwg_wpTDHvk_zZOFtFYJOqjp5VnerlfzalO7GzH9vGa9E8bEFmRMLVnsjXCvi0tj7gdsF1It1l6meAD0Fmwusm16p996n-iTE_7kblCPCAn16XU_KomoNox9WDI9YK0pLeYNwiI4ABZCLiBq25jF_oiQKxqSWBJA/s1600/coins-image.png'
+            div0.alt='img'
+            div0.classList.add('imd-fluid')
+            questionContainerElement.appendChild(div0)
+    
+            const div = document.createElement('h1')
+            div.innerText = `You Got ${count} Answer Right`
+            div.classList.add('final-answer')
+            questionContainerElement.appendChild(div)
+    
+            const div1 = document.createElement('a')
+            div1.innerText = "Lets Go"
+            div1.href='.'
+            div1.classList.add('final-answer1')
+            div1.classList.add('img-fluid')
+            letgo.appendChild(div1)
+            
+        }
+        }
+    }
+    function nextQuestion(){
+        document.getElementsByTagName
+        setTimeout(next, 500);
+    }
+    
+    function startGame1(){
+        setTimeout(startGame,500)
+    }
+
+    const next =() => {
+    currentQuestionIndex++
+    setNextQuestion()
+    }
+    
+    function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+    count=0
+    test1.addEventListener('click',()=>{count=count+1})
+    
+    
+    
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct)
+    })
+    
+    
+    function setStatusClass(element, correct) {
+       
+    clearStatusClass(element)
+    
+    if (correct) {
+    element.classList.add('correct')
+    } else {
+    element.classList.add('wrong')
+    
+    }
+    }
+    
+    function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+    }
+    
+    const questions = [
+    {
+    question: 'Which Cricket Team has won the most ICC Cricket World Cup?',
+    answers: [
+    { text: 'Australia', correct: true },
+    { text: 'England', correct: false },
+    { text: 'India', correct: false }
+    ]
+    },
+    {
+    question: 'Most ODI matches played by a team?',
+    answers: [
+    { text: 'West Indies', correct: false },
+    { text: 'India', correct: true },
+    { text: 'Bangladesh', correct: false }
+    ]
+    },
+    {
+    question: 'Who scored 300 in ODI?',
+    answers: [
+    { text: 'Sachin', correct: false },
+    { text: 'Charles Bannerman', correct: false },
+    { text: 'Don Bradman', correct: true }
+    ]
+    },
+    {
+    question: 'Who took 500 wickets in Test cricket?',
+    answers: [
+    { text: 'Trent Boult', correct: false },
+    { text: 'Shaheen Afridi', correct: false },
+    { text: 'Muttiah Muralitharan', correct: true }
+    ]
+    },
+    {
+    question: 'Which Cricket Team has won the most ICC Cricket World Cup?',
+    answers: [
+    { text: 'Australia', correct: true },
+    { text: 'England', correct: false },
+    { text: 'India', correct: false }
+    ]
+    },
+    {
+    question: 'Most ODI matches played by a team?',
+    answers: [
+    { text: 'West Indies', correct: false },
+    { text: 'India', correct: true },
+    { text: 'Bangladesh', correct: false }
+    ]
+    },
+    {
+    question: 'Who scored 300 in ODI?',
+    answers: [
+    { text: 'Sachin', correct: false },
+    { text: 'Charles Bannerman', correct: false },
+    { text: 'Don Bradman', correct: true }
+    ]
+    },
+    {
+    question: 'Which country won the World Cup in 2007?',
+    answers: [
+    { text: 'South Africa', correct: false },
+    { text: 'Australia', correct: true },
+    { text: 'New Zealand', correct: false }
+    ]
+    },
+    {
+    question: 'Who took 500 wickets in Test cricket?',
+    answers: [
+    { text: 'Trent Boult', correct: false },
+    { text: 'Shaheen Afridi', correct: false },
+    { text: 'Muttiah Muralitharan', correct: true }
+    ]
+    },
+    {
+    question: 'Which team won the ICC cricket world cup in 2009?',
+    answers: [
+    { text: 'New Zealand', correct: false },
+    { text: 'West Indies', correct: false },
+    { text: 'Australia', correct: true }
+    ]
+    },
+    {
+    question: 'Which cricket ground hosted the cricket World Cup in 1983?',
+    answers: [
+    { text: 'Wanderers Stadium', correct: false },
+    { text: 'Eden Gardens', correct: false },
+    { text: 'Lord s Cricket Ground', correct: true }
+    ]
+    },
+    {
+    question: ' How many times did England lose the Cricket World Cup final?',
+    answers: [
+    { text: '3', correct: true },
+    { text: '1', correct: false },
+    { text: '4', correct: false }
+    ]
+    },
+    {
+    question: 'Which team won the ICC cricket world cup in 1998?',
+    answers: [
+    { text: 'Pakistan', correct: false },
+    { text: 'South Africa', correct: true },
+    { text: 'England', correct: false }
+    ]
+    },
+    {
+    question: 'Which English cricketer has scored the most runs in ODI matches?',
+    answers: [
+    { text: 'Eoin Morgan', correct: true },
+    { text: 'Jos Buttler', correct: false },
+    { text: 'Joe Root', correct: false }
+    ]
+    },
+    {
+    question: 'Can batsman hit the ball twice?',
+    answers: [
+    { text: 'Yes', correct: false },
+    { text: 'No', correct: true },
+    { text: 'Unless referee allow before the match.', correct: false }
+    ]
+    },
+    {
+    question: 'From what material was Dennis Lillee s cricket bat made for the 1979 Test against England?',
+    answers: [
+    { text: 'Zinc', correct: false },
+    { text: 'Bamboo', correct: false },
+    { text: 'Aluminium', correct: true }
+    ]
+    }, 
+    ]
+    </script>
+    <style>
+    .rw_footer_sticky {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       text-align: center;
+       z-index: 999999;
+    }
+    </style>
+    <div class="rw_footer_sticky" >
+    
+    </div>
+    </div>
